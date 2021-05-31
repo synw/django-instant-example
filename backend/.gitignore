@@ -1,0 +1,40 @@
+__pycache__
+*.pyc
+.vscode
+/.cache
+**/notebooks
+**/.ipynb_checkpoints
+
+# Various directory index, temp file and editor's config
+*.DS_Store
+*.idea
+.*.sw?
+
+# virtualenv
+/parts/
+/var/
+/.envs/
+/venv/
+/bin/
+/lib/
+/share/
+/etc/
+pyvenv.cfg
+
+# Ruby & Compass
+.sass-cache
+/node_modules/
+
+# project db
+/dumps
+
+# Third party config files
+localsettings.py
+
+# Ignore compiled translation catalogs
+*.mo
+
+# Javascript
+yarn.lock
+
+
