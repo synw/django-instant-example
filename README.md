@@ -58,3 +58,29 @@ In [2]: publish("public", "message content")
 ```
 
 The message will appear on the frontend
+
+## Websockets server
+
+This demo is configured to use a the official Centrifugo demo instance
+on Heroku. It is recommenced to install a Centrifugo server locally:
+[doc](https://github.com/synw/django-instant#install-the-websockets-server).
+
+Recommended Centrifugo config for a full featured server:
+
+```javascript
+{
+  "v3_use_offset": true,
+  "token_hmac_secret_key": "secret",
+  "admin_password": "password",
+  "admin_secret": "secret",
+  "api_key": "api_key",
+  "allowed_origins": ["*"],
+  "publish": true,
+  "anonymous": true,
+  "join_leave": true,
+  "presence": true,
+  "history_size": 100,
+  "history_lifetime": 300,
+  "history_recover": true
+}
+```
