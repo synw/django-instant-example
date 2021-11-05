@@ -1,2 +1,3 @@
 cent
+django-instant
 django-cors-headers
