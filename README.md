@@ -28,17 +28,35 @@ with a user `adminuser` with the password `adminpwd`. Some channels are created
 in the backend: a public channel, a user channel and a group channel. Check the
 admin
 
+### Websockets server
+
+Install a Centrifugo server locally:
+
+```
+cd backend/instant_backend
+python manage.py installws
+```
+
+[More info](https://github.com/synw/django-instant#install-the-websockets-server).
+
+Run the websockets server:
+
+```
+cd backend/instant_backend
+python manage.py runws
+```
+
 ### Frontend
 
 ```
 cd frontend
 npm install
 # or yarn install
-npm run serve
-# or yarn serve
+npm run dev
+# or yarn dev
 ```
 
-The frontend is available at `localhost:8080`
+The frontend is available at `localhost:3000`
 
 ## Publish messages
 
@@ -58,9 +76,3 @@ In [2]: publish("public", "message content")
 ```
 
 The message will appear on the frontend
-
-## Websockets server
-
-This demo is configured to use a the official Centrifugo demo instance
-on Heroku. It is recommenced to install a Centrifugo server locally:
-[doc](https://github.com/synw/django-instant#install-the-websockets-server).

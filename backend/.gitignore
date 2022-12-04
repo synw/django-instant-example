@@ -4,6 +4,7 @@ __pycache__
 /.cache
 **/notebooks
 **/.ipynb_checkpoints
+centrifugo
 
 # Various directory index, temp file and editor's config
 *.DS_Store

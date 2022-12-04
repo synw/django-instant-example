@@ -8,35 +8,19 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive } from "vue";
-import instant from "@/ws";
+<script setup lang="ts">
+import { reactive } from "vue";
+import { instant } from "@/ws";
 
-export default defineComponent({
-  emits: ["loggedin"],
-  // eslint-disable-next-line
-  setup(props, { emit }) {
-    const form = reactive({
-      username: "",
-      password: "",
-    });
+const emit = defineEmits(["loggedin"]);
 
-    async function login() {
-      await instant.login(form.username, form.password);
-      emit("loggedin");
-    }
-
-    return {
-      login,
-      form,
-    };
-  },
+const form = reactive({
+  username: "adminuser",
+  password: "adminpwd",
 });
-</script>
 
-<style scoped>
-#form > div {
-  margin-top: 1em;
+async function login() {
+  await instant.login(form.username, form.password);
+  emit("loggedin");
 }
-</style>
-
+</script>

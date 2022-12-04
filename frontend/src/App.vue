@@ -1,34 +1,23 @@
 <template>
-  <h1>Django Instant example</h1>
-  <websockets-demo></websockets-demo>
+  <div class="flex flex-col min-h-screen">
+    <div class="w-full h-16 p-3 primary">
+      <div class="text-2xl">Django Instant</div>
+    </div>
+    <div class="flex flex-row w-full h-full">
+      <div class="container p-3 mx-auto background">
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, onBeforeMount } from "vue";
-import { initState, isLoggedIn } from "@/state";
-import WebsocketsDemo from "./components/WebsocketsDemo.vue";
+<script setup lang="ts">
+import { onBeforeMount } from "vue";
+import { initWs } from "@/ws"
 
-export default defineComponent({
-  name: "App",
-  components: {
-    WebsocketsDemo,
-  },
-  setup() {
-    onBeforeMount(() => {
-      initState();
-      console.log("Is logged in", isLoggedIn.value);
-    });
-  },
-});
+onBeforeMount(() => initWs());
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
+
+

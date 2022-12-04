@@ -128,17 +128,17 @@ STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 SESSION_COOKIE_SAMESITE = "Lax"
-SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
 
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_SAMESITE = "Lax"
-# CSRF_TRUSTED_ORIGINS = ["https://localhost:8080"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
-# CENTRIFUGO_HOST = "https://msgxyz.herokuapp.com"
-CENTRIFUGO_HOST = "https://centrifugo2.herokuapp.com/"
-CENTRIFUGO_PORT = None
-CENTRIFUGO_HMAC_KEY = "secret"
-CENTRIFUGO_API_KEY = "api_key"
+CENTRIFUGO_HOST = "http://localhost"
+CENTRIFUGO_PORT = 8427
+CENTRIFUGO_HMAC_KEY = "74a7891a-25ea-4afe-a042-af14cae8b1a3"
+CENTRIFUGO_API_KEY = "e28e69cc-6ff6-425e-83af-5f37848a2661"
+SITE_NAME = "instant_backend"

@@ -1,30 +1,35 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "djangoinstant-demo",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "centrifuge": "^2.7.5",
-    "core-js": "^3.6.5",
-    "djangoinstant": "^0.1.0",
-    "vue": "^3.0.0",
-    "vue-cookie-next": "^1.0.3"
+    "centrifuge": "^3.0.1",
+    "djangoinstant": "^0.4.0",
+    "vue": "^3.2.31",
+    "vue-router": "4"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-typescript": "^7.0.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "typescript": "~4.1.5"
+    "@iconify/json": "^2.1.26",
+    "@snowind/plugin": "0.4.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vue/compiler-sfc": "^3.2.31",
+    "autoprefixer": "^10.4.4",
+    "path": "^0.12.7",
+    "postcss": "^8.4.12",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "sass": "^1.50.0",
+    "tailwindcss": "^3.0.23",
+    "tailwindcss-semantic-colors": "^0.2.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3",
+    "unplugin-icons": "^0.14.1",
+    "unplugin-vue-components": "^0.18.5",
+    "vite": "^2.9.1"
   }
 }

@@ -1,12 +1,5 @@
-import { ref } from "@vue/reactivity";
-import { VueCookieNext } from "vue-cookie-next";
+import { ref } from "vue"
 
-const isLoggedIn = ref(false);
+const isLoggedIn = ref(false)
 
-function initState(): void {
-  if (VueCookieNext.isCookieAvailable("csrftoken")) {
-    isLoggedIn.value = true
-  }
-}
-
-export { initState, isLoggedIn }
+export { isLoggedIn }
