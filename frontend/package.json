@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "centrifuge": "^3.0.1",
-    "djangoinstant": "^0.4.0",
+    "djangoinstant": "^0.5.0",
     "vue": "^3.2.31",
     "vue-router": "4"
   },
